@@ -1,7 +1,7 @@
 console.log("productos.js cargado correctamente");
 let productoEditando = null;
 
-// 1. CARGAR PRODUCTOS EN EL CATÁLOGO PÚBLICO (Versión moderna sin descripción)
+// 1. CARGAR PRODUCTOS EN EL CATÁLOGO PÚBLICO (Con Stock incluido)
 fetch("http://localhost:3000/productos")
     .then(response => response.json())
     .then(data => {
@@ -21,7 +21,8 @@ fetch("http://localhost:3000/productos")
                                 
                                 <div class="mt-auto">
                                     <p class="mb-1"><strong>Precio:</strong> <span class="text-success fw-bold">$${producto.precio}</span></p>
-                                    <p class="mb-3"><strong>Categoría:</strong> ${producto.categoria}</p>
+                                    <p class="mb-1"><strong>Categoría:</strong> ${producto.categoria}</p>
+                                    <p class="mb-3"><strong>Disponibles (Stock):</strong> <span class="badge bg-secondary">${producto.stock} uds</span></p>
                                 </div>
                                 <button class="btn btn-primary btn-sm w-100"
                                         onclick='verDetalle(${JSON.stringify(producto)})'>
@@ -148,7 +149,7 @@ function editarProducto(producto) {
     document.getElementById("imagen").value = producto.imagen;
 }
 
-// 6. FUNCIÓN PARA MOSTRAR LOS DETALLES EN EL MODAL FLOTANTE
+// 6. FUNCIÓN PARA MOSTRAR LOS DETALLES EN EL MODAL FLOTANTE (Con Stock incluido)
 function verDetalle(producto) {
     document.getElementById("modalProductoNombre").innerText = producto.nombre;
     document.getElementById("modalProductoImagen").src = producto.imagen;
@@ -156,6 +157,11 @@ function verDetalle(producto) {
     document.getElementById("modalProductoDescripcion").innerText = producto.descripcion;
     document.getElementById("modalProductoPrecio").innerText = producto.precio;
     document.getElementById("modalProductoCategoria").innerText = producto.categoria;
+    
+    // Si tu modal en HTML tiene espacio para el stock lo pintamos, si no, con el del catálogo ya cumples.
+    if(document.getElementById("modalProductoStock")) {
+        document.getElementById("modalProductoStock").innerText = producto.stock;
+    }
 
     const miModal = new bootstrap.Modal(document.getElementById('detalleModal'));
     miModal.show();
