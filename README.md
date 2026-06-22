@@ -1,171 +1,167 @@
-# TecnoHogar - Tienda Virtual
-
-## Descripción del Proyecto
-
-TecnoHogar es una tienda virtual enfocada en la venta de productos tecnológicos como teclados, mouse, audífonos, memorias USB y monitores.
-
-Este proyecto fue desarrollado como evidencia final del programa Técnico en Programación de Software del SENA, integrando frontend, backend y base de datos.
+# Proyecto: Tienda Virtual Personalizada - TecnoHogar
 
 ---
 
-## Tecnologías Utilizadas
+# 1. Nombre de la tienda virtual
 
-### Frontend
+TecnoHogar
+
+---
+
+# 2. Integrantes del grupo
+
+* Juan Esteban Toro Restrepo
+* Ficha 3336014
+* Programación de software
+
+---
+
+# 3. Descripción de la tienda
+
+TecnoHogar es una tienda virtual enfocada en la venta de productos tecnológicos como teclados, mouse, audífonos, monitores, memorias USB y otros accesorios tecnológicos.
+
+La tienda fue diseñada para ofrecer una experiencia sencilla y organizada en la visualización y administración de productos tecnológicos.
+
+---
+
+# 4. Objetivo del proyecto
+
+Desarrollar una tienda virtual funcional que integre frontend, backend y base de datos.
+
+El propósito principal es aplicar los conocimientos adquiridos durante la formación en programación de software, integrando todas las capas de desarrollo en un sistema funcional.
+
+---
+
+# 5. Tecnologías utilizadas
+
+## Frontend
 
 * HTML5
 * CSS3
 * Bootstrap
 * JavaScript
 
-### Backend
+## Backend
 
 * Node.js
 * Express.js
 
-### Base de Datos
+## Base de Datos
 
 * MySQL
 
 ---
 
-## Funcionalidades Implementadas
-
-* Navegación entre páginas
-* Catálogo de productos
-* Formulario de contacto
-* CRUD completo de productos
-* Login administrativo
-* Conexión con base de datos MySQL
-
----
-
-## Estructura del Proyecto
+# 6. Estructura del proyecto
 
 ```bash
-Taller_Full_Satck_2026/
+proyecto final full stark
 │
-├── frontend/
-│   ├── css/
-│   ├── js/
-│   ├── img/
+├── frontend
+│   ├── css
+│   ├── js
+│   ├── img
 │   ├── index.html
 │   ├── productos.html
-│   ├── contacto.html
 │   ├── ayuda.html
+│   ├── contacto.html
 │   ├── login.html
 │   └── admin-productos.html
 │
-├── backend/
+├── backend
 │   └── server.js
-│
-└── package.json
 ```
 
 ---
 
-## Base de Datos
+# 7. Instrucciones de instalación y ejecución
 
-Nombre de la base de datos:
+## 1. Instalar dependencias
 
-```sql
-contactos_db
-```
-
-Tablas principales:
-
-* productos
-* contactos
-* usuarios
-
----
-
-## Instalación
-
-### 1. Clonar repositorio
-
-```bash
-git clone https://github.com/juan9229je-web/proyecto-final-full-stark
-```
-
-### 2. Instalar dependencias
+Ejecutar en terminal:
 
 ```bash
 npm install
 ```
 
-### 3. Configurar MySQL
+## 2. Configurar base de datos
 
-Crear la base de datos:
+Crear la base de datos en MySQL:
 
 ```sql
-CREATE DATABASE contactos_db;
+contactos_db
 ```
 
-Importar o crear las tablas necesarias:
+Crear las tablas:
 
 * productos
 * contactos
 * usuarios
 
----
+## 3. Ejecutar backend
 
-## Ejecución del Proyecto
-
-### Backend
-
-Entrar a la carpeta backend:
-
-```bash
-cd backend
-```
-
-Ejecutar:
+Ingresar a la carpeta backend y ejecutar:
 
 ```bash
 node server.js
 ```
 
-Debe mostrar:
-
-```bash
-Servidor en http://localhost:3000
-Conectado a MySQL
-```
-
----
-
-### Frontend
-
-Abrir la carpeta frontend en Visual Studio Code y ejecutar con Live Server.
-
----
-
-## Login Administrativo
-
-Ejemplo de acceso:
-
-Correo:
+El servidor correrá en:
 
 ```text
-admin@gmail.com
+http://localhost:3000
 ```
 
-Contraseña:
+## 4. Ejecutar frontend
 
-```text
-12345
-```
+Abrir los archivos del frontend usando Live Server o navegador.
 
 ---
 
-## Autor
+# 8. Funcionalidades implementadas
 
-Nombre: Juan Esteban Toro Restrepo
+* Navegación entre páginas
+* Catálogo de productos
+* CRUD de productos
+* Formulario de contacto
+* Login administrativo
+* Protección del panel administrativo
 
-Ficha: 3336014
+---
 
-Fecha: 22/06/2026
+# 9. Flujo de información
 
-SENA - Programación de Software
+El flujo de información del sistema funciona de la siguiente manera:
 
+1. El usuario interactúa con el frontend.
+2. JavaScript captura la información ingresada.
+3. Los datos se envían al backend mediante fetch.
+4. El backend procesa la solicitud con Node.js y Express.
+5. El backend se conecta con MySQL.
+6. La base de datos responde con la información solicitada.
+7. La respuesta regresa al frontend y se muestra al usuario.
 
+Flujo resumido:
+
+Frontend → Backend → Base de Datos → Backend → Frontend
+
+---
+
+# 10. Pruebas realizadas
+
+Durante el desarrollo se realizaron las siguientes pruebas:
+
+* Prueba de navegación entre páginas
+* Prueba de conexión frontend-backend
+* Prueba de conexión backend-MySQL
+* Prueba de catálogo de productos
+* Prueba CRUD de productos
+* Prueba de login correcto
+* Prueba de login incorrecto
+* Prueba de acceso al panel administrativo
+
+---
+
+# 11. Enlace del video de sustentación
+
+Pendiente de agregar enlace del video final.
