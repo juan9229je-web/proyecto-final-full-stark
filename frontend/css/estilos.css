@@ -1,0 +1,152 @@
+/* =========================
+   TÍTULOS
+========================= */
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font: bold 14px sans-serif;
+}
+
+
+/* =========================
+   NORMALIZACIÓN HTML5
+========================= */
+
+header, section, footer, aside, nav, article, hgroup {
+  display: block;
+}
+
+
+/* =========================
+   ESTRUCTURA GENERAL
+========================= */
+
+body {
+  text-align: center;
+  background: #f8f9fa;
+}
+
+.agrupar {
+  width: 1000px;
+  margin: 15px auto;
+}
+
+
+/* =========================
+   CABECERA
+========================= */
+
+.cabecera {
+  background: #0b1016;
+  color: white;
+  padding: 20px;
+}
+
+.cabecera h1 {
+  text-align: left;
+}
+
+
+/* =========================
+   MENÚ
+========================= */
+
+.menu a:hover {
+  color: #0d6efd;
+}
+.menu li {
+  list-style: none;
+  padding: 5px;
+  font: bold 14px verdana;
+  display: inline-block;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+}
+
+.menu a:hover {
+  color: blue;
+}
+
+
+/* =========================
+   CONTENIDO PRINCIPAL
+========================= */
+
+.seccion {
+  padding: 20px;
+  width: 100%;
+  
+}
+
+article {
+  background: rgba(225, 224, 222, 0.765);
+  border: 1px solid #070707f0;
+  border-radius: 10px;
+}
+
+article {
+  background: rgba(225, 224, 222, 0.765);
+  border: 1px solid #070707f0;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+time {
+  color: #999;
+}
+
+
+/* =========================
+   BARRA LATERAL
+========================= */
+
+.columna {
+  width: 300px;
+  float: left;
+  margin: 5px 0;
+}
+
+.columna blockquote {
+  border: 1px solid black;
+  padding: 40px;
+  background: #efefee;
+  margin-bottom: 60px;
+}
+
+
+/* =========================
+   PIE DE PÁGINA
+========================= */
+
+.pie {
+  clear: both;
+  padding: 20px;
+  background: #2d3436;
+  color: #fff;
+}
+
+
+/* =========================
+   IMÁGENES
+========================= */
+
+.logo-tienda {
+    width: 150px;
+    margin-right: 20px;
+}
+.d-flex h2,
+.d-flex h3,
+.d-flex p {
+    text-align: left;
+}
+.card img {
+  height: 250px;
+  object-fit: cover;
+}

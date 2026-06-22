@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración de Productos</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bloqueo inmediato si no hay sesión iniciada -->
+    <script>
+        if (!sessionStorage.getItem("usuario")) {
+            alert("Acceso denegado. Por favor, inicia sesión.");
+            window.location.href = "login.html";
+        }
+    </script>
+</head>
+
+<body>
+
+<div class="agrupar">
+
+    <header class="cabecera d-flex align-items-center justify-content-between p-3">
+        <h1 class="m-0">TecnoHogar</h1>
+        
+        <nav class="menu">
+            <ul class="d-flex m-0 p-0" style="list-style: none; gap: 15px; align-items: center;">
+                <li><a href="index.html" class="text-white text-decoration-none">Inicio</a></li>
+                <li><a href="ayuda.html" class="text-white text-decoration-none">Ayuda</a></li>
+                <li><a href="contacto.html" class="text-white text-decoration-none">Contacto</a></li>
+                <li><a href="productos.html" class="text-white text-decoration-none">Productos</a></li>
+                <li><a href="#" id="btn-cerrar-sesion" class="text-danger fw-bold text-decoration-none">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="seccion">
+        <article class="p-4">
+
+            <h2>Administración de Productos</h2>
+            <p>Registre nuevos productos para el catálogo de TecnoHogar.</p>
+
+            <form id="form-producto">
+
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre del producto</label>
+                    <input type="text" class="form-control" id="nombre" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="descripcion" class="form-label">Descripción</label>
+                    <textarea class="form-control" id="descripcion" rows="3" required></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="precio" class="form-label">Precio</label>
+                    <input type="number" class="form-control" id="precio" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="categoria" class="form-label">Categoría</label>
+                    <input type="text" class="form-control" id="categoria" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="stock" class="form-label">Stock</label>
+                    <input type="number" class="form-control" id="stock" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="imagen" class="form-label">Imagen</label>
+                    <input type="text" class="form-control" id="imagen" placeholder="img/nombre-imagen.jpg" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Guardar Producto
+                </button>
+
+            </form>
+            <hr>
+
+        <h3 class="mt-4">Productos registrados</h3>
+
+        <div id="lista-admin-productos" class="row mt-3">
+            <!-- Aquí se cargarán los productos -->
+        </div>
+        </article>
+    </section>
+
+        <!-- PIE DE PÁGINA -->
+    <footer class="pie">
+        © 2026 TecnoHogar - Todos los derechos reservados
+    </footer>
+
+</div>
+<!-- JavaScript de productos -->
+<script src="js/productos.js"></script>
+
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.getElementById("btn-cerrar-sesion").addEventListener("click", (e) => {
+        e.preventDefault(); // Evita que la página salte
+        sessionStorage.removeItem("usuario"); // Borra el usuario guardado
+        alert("Sesión cerrada correctamente."); // Avisa al usuario
+        window.location.href = "index.html"; // Lo manda al inicio
+    });
+</script>
+</body>
+</html>
