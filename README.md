@@ -84,7 +84,7 @@ Tablas principales:
 ### 1. Clonar repositorio
 
 ```bash
-git clone URL_DEL_REPOSITORIO
+git clone https://github.com/juan9229je-web/proyecto-final-full-stark
 ```
 
 ### 2. Instalar dependencias
@@ -153,15 +153,19 @@ admin@gmail.com
 Contraseña:
 
 ```text
-123456
+12345
 ```
 
 ---
 
 ## Autor
 
-Juan Esteban
+Nombre: Juan Esteban Toro Restrepo
 
-SENA - Técnico en Programación de Software
+Ficha: 3336014
 
-2026
+Fecha: 22/06/2026
+
+SENA - Programación de Software
+
+
