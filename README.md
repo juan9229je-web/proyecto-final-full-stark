@@ -164,4 +164,4 @@ Durante el desarrollo se realizaron las siguientes pruebas:
 
 # 11. Enlace del video de sustentación
 
-Pendiente de agregar enlace del video final.
+https://www.youtube.com/watch?v=E9m8ijIqBXM
