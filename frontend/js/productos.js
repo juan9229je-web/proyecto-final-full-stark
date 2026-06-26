@@ -22,7 +22,7 @@ fetch("http://localhost:3000/productos")
                                 <div class="mt-auto">
                                     <p class="mb-1"><strong>Precio:</strong> <span class="text-success fw-bold">$${producto.precio}</span></p>
                                     <p class="mb-1"><strong>Categoría:</strong> ${producto.categoria}</p>
-                                    <p class="mb-3"><strong>Disponibles (Stock):</strong> <span class="badge bg-secondary">${producto.stock} uds</span></p>
+                                    <p class="mb-3"><strong>Stock:</strong> <span class="badge bg-secondary">${producto.stock} uds</span></p>
                                 </div>
                                 <button class="btn btn-primary btn-sm w-100"
                                         onclick='verDetalle(${JSON.stringify(producto)})'>
